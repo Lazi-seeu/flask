@@ -138,7 +138,8 @@ snowballstemmer==2.2.0
     # via
     #   -r /Users/david/Projects/flask/requirements/docs.txt
     #   sphinx
-sphinx>=3.0,<6.0 
+sphinx>=3.0,<6.0
+
     # via
     #   -r /Users/david/Projects/flask/requirements/docs.txt
     #   pallets-sphinx-themes
