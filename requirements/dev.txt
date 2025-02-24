@@ -4,7 +4,7 @@
 #
 #    pip-compile dev.in
 #
-alabaster==1.0.0
+alabaster==0.7.16
     # via
     #   -r /Users/david/Projects/flask/requirements/docs.txt
     #   sphinx
