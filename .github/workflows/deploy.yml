@@ -1,9 +1,9 @@
-name: Deploy Flask App to AWS EC2
+name: Deploy to AWS EC2
 
 on:
   push:
     branches:
-      - main  # Runs the workflow on every push to the main branch
+      - main
 
 jobs:
   deploy:
@@ -20,7 +20,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/flask-app  # Change to your Flask app directory
+            cd ~/app
             git pull origin main
-            pip install -r requirements.txt  # Install dependencies
-            sudo systemctl restart flask-app  # Restart Flask app (if using a service)
+            docker-compose up -d --build  # Modify this based on your app
